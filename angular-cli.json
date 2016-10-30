@@ -19,7 +19,7 @@
       "mobile": false,
       "styles": [
         "../node_modules/bootstrap/dist/css/bootstrap.css",
-        "styles.sass"
+        "styles.scss"
       ],
       "scripts": [
         "../node_modules/bootstrap/dist/js/bootstrap.js"
@@ -44,7 +44,7 @@
     }
   },
   "defaults": {
-    "styleExt": "sass",
+    "styleExt": "scss",
     "prefixInterfaces": false,
     "inline": {
       "style": false,

@@ -2,19 +2,40 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { LoadingComponent } from './loading/loading.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { NoContentComponent } from './no-content/no-content.component';
+import { CardsComponent } from './cards/cards.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoadingComponent
+    LoadingComponent,
+    NavigationComponent,
+    NoContentComponent,
+    CardsComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot([
+      // { path: 'hero/:id', component: HeroDetailComponent },
+      // { path: 'crisis-center', component: CrisisListComponent },
+      // {
+      //   path: 'heroes',
+      //   component: HeroListComponent,
+      //   data: {
+      //     title: 'Heroes List'
+      //   }
+      // },
+      { path: '', redirectTo: '/cards', pathMatch: 'full' },
+      { path: 'cards', component: CardsComponent },
+      { path: '**', component: NoContentComponent }
+    ])    
   ],
   providers: [],
   bootstrap: [AppComponent]

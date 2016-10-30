@@ -1,0 +1,35 @@
+.masthead {
+    background: black;
+    background-repeat: no-repeat;
+    padding-top: 20px;
+    padding: 10px;
+}
+
+.masthead img {
+    width: 460px;
+    max-width: 90%;
+}
+
+body {
+    background: black;
+    background-image: url('assets/background checker plate.png');
+    background-position: 0px 200px;
+}
+
+.navbar-default,
+.dropdown-menu {
+    background-color: #4a4a4a;
+    border-color: #5f5f5f;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: black;
+    background-color: #767676;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a {
+    color: black;
+}
