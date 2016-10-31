@@ -1,19 +1,13 @@
 .masthead {
-    background: black;
+    background: #111;
     background-repeat: no-repeat;
     padding-top: 20px;
     padding: 10px;
 }
 
 .masthead img {
-    width: 460px;
+    max-height: 80px;
     max-width: 90%;
-}
-
-body {
-    background: black;
-    background-image: url('assets/background checker plate.png');
-    background-position: 0px 200px;
 }
 
 .navbar-default,

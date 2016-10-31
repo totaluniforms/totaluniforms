@@ -1,6 +1,5 @@
 <div class="container">
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
+  <div *ngFor="let category of categories">
+    <app-card [category]="category"></app-card>
+  </div>
 </div>

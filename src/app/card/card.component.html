@@ -1,9 +1,9 @@
 <div class="col-md-4 col-sm-6 col-xs-12">
   <div class="thumb zoom">
 
-    <a href="http://www.totaluniforms.com.au/office/" class="featured-image-link">
+    <a href="{{category.link}}" class="featured-image-link">
       <div class="thumb-image">
-        <div class="featured-image" style="background-image: url(assets/office.jpg)"></div>
+        <div class="featured-image" [ngStyle]="{ 'background-image': 'url(assets/' + category.image + ')' }"></div>
       </div>
     </a>
 
@@ -12,7 +12,7 @@
       <div class="thumb-title">
         <div class="thumb-name">
           <h2>
-            <a href="http://www.totaluniforms.com.au/office/">Office</a>
+            <a href="{{category.link}}">{{category.name}}</a>
           </h2>
         </div>
       </div>

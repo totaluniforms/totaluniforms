@@ -25,9 +25,9 @@
     padding: 0px;
     vertical-align: top;
     border: none;
-    background: black; /* #111 */
+    background: #111;
     border-bottom: 1px solid black;
-  border-radius: 4px;
+    border-radius: 4px;
 }
 
 
@@ -164,7 +164,8 @@
 }
 
 .thumb {
-  width: 100% !important;
+    font-family: "proxima-nova", Arial, sans-serif;
+    width: 100% !important;
 }
 
 body {
@@ -196,7 +197,7 @@ body {
 }
 
 .thumb-title {
-    text-align: center;
+    text-align: left;
 }
 
 h2 {
