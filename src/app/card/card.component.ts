@@ -1,3 +1,5 @@
+import { Category } from './../category';
+import { RoutesService } from './../routes.service';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -7,11 +9,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
-  @Input() public category;
+  @Input() public category: Category;
 
   constructor() { }
 
   ngOnInit() {
+
     console.log(this.category);
   }
 

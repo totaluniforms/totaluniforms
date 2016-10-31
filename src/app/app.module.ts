@@ -1,3 +1,4 @@
+import { RoutesService } from './routes.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -39,7 +40,9 @@ import { CardComponent } from './card/card.component';
       { path: '**', component: NoContentComponent }
     ])    
   ],
-  providers: [],
+  providers: [
+    RoutesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

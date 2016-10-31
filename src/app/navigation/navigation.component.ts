@@ -1,3 +1,5 @@
+import { Category } from './../category';
+import { RoutesService } from './../routes.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements OnInit {
+    
+    private categories: Category[];
 
-  constructor() { }
+    constructor(private routesService: RoutesService) {
+        this.categories = routesService.getRoutes();
+    }
 
   ngOnInit() {
   }
