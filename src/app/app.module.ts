@@ -35,8 +35,7 @@ import { CardComponent } from './card/card.component';
       //     title: 'Heroes List'
       //   }
       // },
-      { path: '', redirectTo: '/cards', pathMatch: 'full' },
-      { path: 'cards', component: CardsComponent },
+      { path: '', component: CardsComponent },
       { path: '**', component: NoContentComponent }
     ])    
   ],
