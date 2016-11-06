@@ -1,5 +1,17 @@
+$background-colour: #222; // #333
 body {
-    background: #222;//black;
     //background-image: url('assets/background checker plate.png');
     background-position: 0px 170px;
+}
+
+.masthead {
+    background: $background-colour; // #121212
+    background-repeat: no-repeat;
+    padding-top: 20px;
+    padding: 10px;
+}
+
+.masthead img {
+    max-height: 50px;
+    max-width: 90%;
 }
