@@ -1,11 +1,3 @@
-/**
- * Thumbs
- **/
-
-.thumb, .has-post-thumbnail {
-    border-radius: 4px;
-}
-
 .thumb .thumb-image img, .thumb-details {
     -webkit-border-top-left-radius: 4px;
     -webkit-border-top-right-radius: 4px;
@@ -25,7 +17,7 @@
     padding: 0px;
     vertical-align: top;
     border: none;
-    background: #111;
+    background: #2a2a2a;
     border-bottom: 1px solid black;
     border-radius: 4px;
 }
@@ -34,24 +26,15 @@
     padding: 0px 20px 0 15px;
 }
 
-::selection {
-    background: #FD6CA3;
-    color: #FFF;
-    text-shadow: none;
-}
-
 .thumb .thumb-info .thumb-title .thumb-name h2 {
     padding: 0;
     font-size: 18px;
     line-height: 20px;
+
+    margin-top: 5px;
     margin-bottom: 4px;
-}
 
-.thumb .thumb-info .thumb-title .thumb-name h2 {
     color: white;
-}
-
-.thumb .thumb-info .thumb-title .thumb-name h2 {
     font-weight: 600;
     letter-spacing: 0;
 }
@@ -78,23 +61,6 @@
     color: #999;
 }
 
-.thumb .thumb-label-loved .thumb-label-loved-position {
-    display: block;
-    padding: 14px 0 0 0;
-}
-
-.thumb .thumb-label-loved {
-    text-transform: uppercase;
-    font-size: 11px;
-    line-height: 10px;
-    letter-spacing: 0px;
-}
-
-.thumb .thumb-label-loved {
-    background: #FD6CA3;
-    color: #FFF;
-}
-
 .thumb .thumb-image {
     width: 100%;
     height: auto;
@@ -105,7 +71,7 @@
 }
 
 .thumb {
-    opacity: 0.95;
+    opacity: 0.80;
 }
 
 .thumb:hover {
@@ -133,10 +99,6 @@
     transition: .2s;
 }
 
-.site-header {
-  z-index: 0;
-}
-
 .thumb h2 a:visited, .thumb h2 a {
   color: white;
 }
@@ -153,10 +115,6 @@
 .thumb {
     font-family: "proxima-nova", Arial, sans-serif;
     width: 100% !important;
-}
-
-body {
-  font-size: initial;
 }
 
 .featured-image {
@@ -185,8 +143,4 @@ body {
 
 .thumb-title {
     text-align: left;
-}
-
-h2 {
-    margin-top: 5px;
 }

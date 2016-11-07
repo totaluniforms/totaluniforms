@@ -1,12 +1,22 @@
-$background-colour: #222; // #333
+$background-colour: #181818;
+
 body {
-    //background-image: url('assets/background checker plate.png');
-    background-position: 0px 170px;
+    background-color: $background-colour;
+}
+
+.full::after {
+  content: "";
+  background-image: url('assets/background checker plate.png');
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 .masthead {
-    background: $background-colour; // #121212
-    background-repeat: no-repeat;
     padding-top: 20px;
     padding: 10px;
 }
