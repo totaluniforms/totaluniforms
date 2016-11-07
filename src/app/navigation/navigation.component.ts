@@ -8,14 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements OnInit {
-    
-    private categories: Category[];
 
-    constructor(private routesService: RoutesService) {
-        this.categories = routesService.getRoutes();
-    }
+  private categories: Category[];
+
+  private showSearch = false;
+
+  constructor(private routesService: RoutesService) {
+    this.categories = routesService.getRoutes();
+  }
 
   ngOnInit() {
+  }
+
+  toggleSearchBar() {
+    this.showSearch = !this.showSearch
   }
 
 }
