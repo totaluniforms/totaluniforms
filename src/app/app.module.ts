@@ -1,7 +1,7 @@
 import { ProductComponent } from './product/product.component';
 import { CategoryComponent } from './category/category.component';
 import { Category } from './category';
-import { categories } from './categories';
+import { categories } from './data/categories';
 import { RoutesService } from './routes.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';

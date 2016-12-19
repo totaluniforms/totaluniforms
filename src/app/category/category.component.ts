@@ -11,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoryComponent implements OnInit {
     private category: String;
-    private categories: Category[];
+    private products: Category[];
 
     constructor(
         private route: ActivatedRoute,
@@ -23,7 +23,7 @@ export class CategoryComponent implements OnInit {
             .map(params => params['category'])
             .subscribe(category => {
                 this.category = category;
-                this.categories = this.routesService.getRoutes()
+                this.products = this.routesService.getProducts(category);
             });
     }
 }
