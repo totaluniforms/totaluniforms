@@ -4,11 +4,11 @@ import { CardComponent } from './../card/card.component';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'app-cards',
-    templateUrl: './cards.component.html',
-    styleUrls: ['./cards.component.scss']
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.scss']
 })
-export class CardsComponent implements OnInit {
+export class HomeComponent implements OnInit {
     private categories: Category[];
 
     constructor(private routesService: RoutesService) {

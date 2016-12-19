@@ -1,15 +1,19 @@
+import { ProductComponent } from './product/product.component';
+import { CategoryComponent } from './category/category.component';
+import { Category } from './category';
+import { categories } from './categories';
 import { RoutesService } from './routes.service';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Route } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { LoadingComponent } from './loading/loading.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { NoContentComponent } from './no-content/no-content.component';
-import { CardsComponent } from './cards/cards.component';
+import { HomeComponent } from './home/home.component';
 import { CardComponent } from './card/card.component';
 
 @NgModule({
@@ -18,7 +22,9 @@ import { CardComponent } from './card/card.component';
     LoadingComponent,
     NavigationComponent,
     NoContentComponent,
-    CardsComponent,
+    HomeComponent,
+    CategoryComponent,
+    ProductComponent,
     CardComponent,
   ],
   imports: [
@@ -26,18 +32,11 @@ import { CardComponent } from './card/card.component';
     FormsModule,
     HttpModule,
     RouterModule.forRoot([
-      // { path: 'hero/:id', component: HeroDetailComponent },
-      // { path: 'crisis-center', component: CrisisListComponent },
-      // {
-      //   path: 'heroes',
-      //   component: HeroListComponent,
-      //   data: {
-      //     title: 'Heroes List'
-      //   }
-      // },
-      { path: '', component: CardsComponent },
+      { path: '', component: HomeComponent },
+      { path: ':category', component: CategoryComponent },
+      { path: 'product/:product', component: ProductComponent },
       { path: '**', component: NoContentComponent }
-    ])    
+    ])
   ],
   providers: [
     RoutesService

@@ -1,5 +1,7 @@
+import { Route } from '@angular/router';
+
 export interface Category {
   name: string,
-  link: string,
+  path: String,
   image: string
 }
