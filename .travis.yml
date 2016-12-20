@@ -7,15 +7,15 @@ node_js:
   - '6.9.1'
 
 branches:
-  except:
-  - gh-pages
+  only:
+    - master
 
 before_install:
 
 script:
-  - ng build
+  - ng build --prod
 
 after_success:
-  - ng github-pages:deploy
+  - ng ghpages --name="Travis CI" --email="lotsabackscatter@gmail.com"
 
 after_script:
