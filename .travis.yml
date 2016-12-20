@@ -16,6 +16,6 @@ script:
   - ng build --prod
 
 after_success:
-  - ng ghpages --name="Travis CI" --email="lotsabackscatter@gmail.com"
+  - ng ghpages --name="Travis CI" --email="lotsabackscatter@gmail.com" --repo=https://GH_TOKEN@github.com/totaluniforms/totaluniforms.git
 
 after_script:
