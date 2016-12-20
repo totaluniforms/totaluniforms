@@ -1,0 +1,21 @@
+language: node_js
+cache:
+  directories:
+    - node_modules
+
+node_js:
+  - '6.9.1'
+
+branches:
+  except:
+  - gh-pages
+
+before_install:
+
+script:
+  - ng build
+
+after_success:
+  - ng github-pages:deploy
+
+after_script:
