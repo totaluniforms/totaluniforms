@@ -1,4 +1,7 @@
 # Total Uniforms
+[![CI Status]
+   (http://img.shields.io/travis/totaluniforms/totaluniforms.svg?style=flat)]
+   (https://travis-ci.org/totaluniforms/totaluniforms)
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.19-3.
 
