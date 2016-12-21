@@ -15,7 +15,7 @@ before_install:
   - git config --global user.name "Travis CI"
   
 script:
-  - ng github-pages:deploy --gh-token=$GH_TOKEN --gh-username="Travis CI"
+  - ng github-pages:deploy --gh-token=${GH_TOKEN} --gh-username="Travis CI"
 
 after_success:
 
