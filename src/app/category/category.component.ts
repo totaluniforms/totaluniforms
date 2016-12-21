@@ -1,3 +1,4 @@
+import { Product } from './../product';
 import { ActivatedRoute } from '@angular/router';
 import { RoutesService } from './../routes.service';
 import { Category } from './../category';
@@ -11,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoryComponent implements OnInit {
     private category: String;
-    private products: Category[];
+    private products: Product[];
 
     constructor(
         private route: ActivatedRoute,

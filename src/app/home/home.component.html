@@ -1,5 +1,7 @@
 <div class="container">
   <div *ngFor="let category of categories">
-    <app-card [category]="category"></app-card>
+    <a routerLink="/{{category.path}}">
+      <app-card [category]="category"></app-card>
+    </a>
   </div>
 </div>

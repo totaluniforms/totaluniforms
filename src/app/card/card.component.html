@@ -1,7 +1,7 @@
-<div class="col-md-4 col-sm-6 col-xs-12">
+<div class="col-md-4 col-sm-6 col-xs-12 clickable">
   <div class="thumb zoom">
 
-    <a routerLink="/{{category.path}}" class="featured-image-link">
+    <a class="featured-image-link">
       <div class="thumb-image">
         <div class="featured-image" [ngStyle]="{ 'background-image': 'url(assets/' + category.image + ')' }"></div>
       </div>
@@ -12,7 +12,7 @@
       <div class="thumb-title">
         <div class="thumb-name">
           <h2>
-            <a routerLink="/{{category.path}}">{{category.name}}</a>
+            <a>{{category.name}}</a>
           </h2>
         </div>
       </div>

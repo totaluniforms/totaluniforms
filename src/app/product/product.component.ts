@@ -1,3 +1,4 @@
+import { Product } from './../product';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { RoutesService } from './../routes.service';
 import { Category } from './../category';
@@ -11,8 +12,9 @@ import 'rxjs/add/operator/map';
     styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit {
-    private product: String;
-    private products: Category[];
+    private category: String;
+    private productId: String;
+    private product: Product;
 
     constructor(
         private route: ActivatedRoute,
@@ -22,10 +24,10 @@ export class ProductComponent implements OnInit {
 
     ngOnInit() {
         this.route.params
-            .map(params => params['product'])
-            .subscribe(product => {
-                this.product = product;
-                this.products = this.routesService.getRoutes()
+            .subscribe(params => {
+                this.category = params['category'];
+                this.productId =  params['product'];
+                this.product = this.routesService.getProduct(this.productId);
             });
     }
 }

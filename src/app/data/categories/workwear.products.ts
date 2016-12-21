@@ -1,21 +1,21 @@
-import { Category } from './../../category';
+import { Product } from './../../product';
 
-export var workwear: Category[] = [
+export var workwear: Product[] = [
   {
     name: 'Workwear Shirt',
-    path: 'workwear',
+    id: '1',
     image: 'tradies.jpg'
   }, {
     name: 'Work Pants',
-    path: 'work-boots',
+    id: '2',
     image: 'tradie.jpg'
   }, {
     name: 'Work other thing',
-    path: 'ppe',
+    id: '3',
     image: 'tradies.jpg'
   }, {
     name: 'Another work thing',
-    path: 'office',
+    id: '4',
     image: 'office.jpg'
   },
 ];

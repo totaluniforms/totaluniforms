@@ -4,6 +4,10 @@ body {
     background-color: $background-colour;
 }
 
+.clickable {
+    cursor: pointer;
+}
+
 .full::after {
   content: "";
   background-image: url('assets/background checker plate.png');

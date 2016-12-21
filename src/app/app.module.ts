@@ -34,7 +34,7 @@ import { CardComponent } from './card/card.component';
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: ':category', component: CategoryComponent },
-      { path: 'product/:product', component: ProductComponent },
+      { path: ':category/:product', component: ProductComponent },
       { path: '**', component: NoContentComponent }
     ])
   ],

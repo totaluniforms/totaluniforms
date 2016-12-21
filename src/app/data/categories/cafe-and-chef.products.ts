@@ -1,21 +1,21 @@
-import { Category } from './../../category';
+import { Product } from './../../product';
 
-export var cafeandchef: Category[] = [
+export var cafeandchef: Product[] = [
   {
     name: 'Boots',
-    path: 'workwear',
+    id: 'workwear',
     image: 'tradies.jpg'
   }, {
     name: 'Another Boot',
-    path: 'work-boots',
+    id: 'work-boots',
     image: 'tradie.jpg'
   }, {
     name: 'More Boots',
-    path: 'ppe',
+    id: 'ppe',
     image: 'tradies.jpg'
   }, {
     name: 'Bigger Boots',
-    path: 'office',
+    id: 'office',
     image: 'office.jpg'
   },
 ];

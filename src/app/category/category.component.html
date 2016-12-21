@@ -3,6 +3,8 @@
     <a routerLink="/"> Home </a> / <a routerLink="/{{category}}"> {{category}} </a>
   </h4>
   <div *ngFor="let product of products">
-    <app-card [category]="product"></app-card>
+    <a routerLink="/{{category}}/{{product.id}}">
+      <app-card [category]="product"></app-card>
+    </a>
   </div>
 </div>
