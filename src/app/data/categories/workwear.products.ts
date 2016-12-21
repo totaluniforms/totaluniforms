@@ -2,20 +2,24 @@ import { Product } from './../../product';
 
 export var workwear: Product[] = [
   {
-    name: 'Workwear Shirt',
     id: '1',
-    image: 'tradies.jpg'
+    name: 'Workwear Shirt',
+    image: 'tradies.jpg',
+    description: 'A description about the Workwear Shirt'
   }, {
-    name: 'Work Pants',
     id: '2',
-    image: 'tradie.jpg'
+    name: 'Work Pants',
+    image: 'tradie.jpg',
+    description: 'A description about the work Shirt'
   }, {
-    name: 'Work other thing',
     id: '3',
+    name: 'Work other thing',
+    description: 'A description about the work Shirt'
     image: 'tradies.jpg'
   }, {
-    name: 'Another work thing',
     id: '4',
-    image: 'office.jpg'
+    name: 'Another work thing',
+    image: 'office.jpg',
+    description: 'A description about the work Shirt'
   },
 ];
