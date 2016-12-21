@@ -17,6 +17,6 @@ script:
   - ng build
 
 after_success:
-  - ng github-pages:deploy --gh-token=GH_TOKEN --gh-username="Travis CI"
+  - ng github-pages:deploy --gh-token=$GH_TOKEN --gh-username="Travis CI"
 
 after_script:
