@@ -13,9 +13,9 @@ branches:
 before_install:
 
 script:
-  - ng build --environment=production
+  - ng build
 
 after_success:
-  - ng ghpages --name="Travis CI" --email="lotsabackscatter@gmail.com" --repo=https://GH_TOKEN@github.com/totaluniforms/totaluniforms.git
+  - ng github-pages:deploy --gh-token=GH_TOKEN --gh-username="Travis CI"
 
 after_script:
