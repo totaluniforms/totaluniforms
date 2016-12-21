@@ -21,4 +21,5 @@ after_success:
 
 after_script:
   - git remote set-url origin https://$GH_TOKEN@github.com/totaluniforms/totaluniforms.git
+  - git fetch
   - git push origin gh-pages:gh-pages
