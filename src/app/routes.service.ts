@@ -34,24 +34,24 @@ export class RoutesService {
                 };
             case '2':
                 return {
-                    id: "1",
-                    name: "Work Shirt",
-                    description: "Shirt for Work",
-                    image: "tradie.jpg"
+                    id: "2",
+                    name: "Work Boots",
+                    description: "Boots for Work",
+                    image: "tradies.jpg"
                 };
             case '3':
                 return {
-                    id: "1",
-                    name: "Work Shirt",
-                    description: "Shirt for Work",
+                    id: "3",
+                    name: "Pants",
+                    description: "cafenchef",
                     image: "tradie.jpg"
                 };
             case '4':
                 return {
-                    id: "1",
-                    name: "Work Shirt",
+                    id: "4",
+                    name: "Health Shirt",
                     description: "Shirt for Work",
-                    image: "tradie.jpg"
+                    image: "healthcare.jpg"
                 };                                                
             default:
               return {
