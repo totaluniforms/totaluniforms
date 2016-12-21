@@ -14,7 +14,7 @@ export var workwear: Product[] = [
   }, {
     id: '3',
     name: 'Work other thing',
-    description: 'A description about the work Shirt'
+    description: 'A description about the work Shirt',
     image: 'tradies.jpg'
   }, {
     id: '4',
