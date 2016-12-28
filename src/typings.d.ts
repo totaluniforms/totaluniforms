@@ -2,3 +2,5 @@
 // https://www.typescriptlang.org/docs/handbook/writing-declaration-files.html
 
 declare var System: any;
+import { of } from 'rxjs/observable/of';
+import { map } from 'rxjs/operator/map';

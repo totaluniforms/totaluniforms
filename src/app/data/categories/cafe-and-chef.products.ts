@@ -2,20 +2,20 @@ import { Product } from './../../product';
 
 export var cafeandchef: Product[] = [
   {
+    code: 'workwear',
     name: 'Boots',
-    id: 'workwear',
     image: 'tradies.jpg'
   }, {
+    code: 'work-boots',
     name: 'Another Boot',
-    id: 'work-boots',
     image: 'tradie.jpg'
   }, {
+    code: 'ppe',
     name: 'More Boots',
-    id: 'ppe',
     image: 'tradies.jpg'
   }, {
+    code: 'office',
     name: 'Bigger Boots',
-    id: 'office',
     image: 'office.jpg'
   },
 ];

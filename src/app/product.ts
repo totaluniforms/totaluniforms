@@ -1,7 +1,7 @@
 import { Route } from '@angular/router';
 
 export interface Product {
-  id: String,
+  code: String,
   name: string,
   description?: string,
   image: string

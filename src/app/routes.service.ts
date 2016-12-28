@@ -9,58 +9,39 @@ import { proteam } from './data/categories/proteam.products';
 import { school } from './data/categories/school.products';
 import { workboots } from './data/categories/work-boots.products';
 import { office } from './data/categories/office.products';
+import { workwear } from './data/categories/workwear.products';
+
 import { Category } from './category';
 import { categories } from './data/categories';
-import { workwear } from './data/categories/workwear.products';
+
+import { Observable } from '@reactivex/rxjs'
+import * as _ from 'lodash';
 
 @Injectable()
 export class RoutesService {
 
+    private products: Product[];
+
     constructor() {
+        this.products = _.flatten([ppe, healthandbeauty, cafeandchef, polosandtees, proteam, school, workboots, office, workwear]);
     }
 
     public getRoutes(): Category[] {
         return categories;
     }
 
-    public getProduct(productId: String): Product {
-        switch (productId) {
-            case '1':
-                return {
-                    id: "1",
-                    name: "Work Shirt",
-                    description: "Shirt for Work",
-                    image: "tradie.jpg"
-                };
-            case '2':
-                return {
-                    id: "2",
-                    name: "Work Boots",
-                    description: "Boots for Work",
-                    image: "tradies.jpg"
-                };
-            case '3':
-                return {
-                    id: "3",
-                    name: "Pants",
-                    description: "cafenchef",
-                    image: "tradie.jpg"
-                };
-            case '4':
-                return {
-                    id: "4",
-                    name: "Health Shirt",
-                    description: "Shirt for Work",
-                    image: "healthcare.jpg"
-                };                                                
-            default:
-              return {
-                    id: "100",
-                    name: "Work Shirt",
-                    description: "Shirt for Work",
-                    image: "tradie.jpg"
-                }
+    public getProduct(productCode: String): Product {
+        var filteredProducts = _.filter(this.products, product => {
+            return product.code == productCode;
+        });
+
+        if (!filteredProducts.length) {
+            let message = "No product with code: " + productCode;
+            console.error(message);
+            throw new Error(message);
         }
+
+        return filteredProducts[0];
     }
 
     public getProducts(category: String): Product[] {

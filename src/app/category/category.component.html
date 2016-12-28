@@ -4,9 +4,9 @@
       <a routerLink="/"> Home </a> / <a routerLink="/{{category}}"> {{category}} </a>
     </h4>
   </div>
-  <div class="col-xs-12">
-    <div *ngFor="let product of products">
-      <a routerLink="/{{category}}/{{product.id}}">
+  <div *ngFor="let product of products" class="col-md-4 col-sm-6 col-xs-12">
+    <div class="product-card">
+      <a routerLink="/{{category}}/{{product.code}}">
         <app-card [category]="product"></app-card>
       </a>
     </div>

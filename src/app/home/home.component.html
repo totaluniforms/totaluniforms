@@ -1,7 +1,9 @@
 <div class="container">
-  <div *ngFor="let category of categories">
-    <a routerLink="/{{category.path}}">
-      <app-card [category]="category"></app-card>
-    </a>
+  <div *ngFor="let category of categories" class="col-md-4 col-xs-12">
+    <div class="category-card">
+      <a routerLink="/{{category.path}}">
+        <app-card [category]="category"></app-card>
+      </a>
+    </div>
   </div>
 </div>
