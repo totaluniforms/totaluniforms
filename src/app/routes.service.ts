@@ -14,7 +14,7 @@ import { workwear } from './data/categories/workwear.products';
 import { Category } from './category';
 import { categories } from './data/categories';
 
-import { Observable } from '@reactivex/rxjs'
+import { Observable } from '@reactivex/rxjs';
 import * as _ from 'lodash';
 
 @Injectable()

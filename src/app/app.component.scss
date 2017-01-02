@@ -35,3 +35,13 @@ body {
 .product-card, .category-card {
     margin: 0 36px 40px 0;
 }
+
+.product-card  {
+    .thumb .thumb-image {
+        max-height: 300px;
+    }
+
+    .featured-image {
+        height: 300px;
+    }
+}
