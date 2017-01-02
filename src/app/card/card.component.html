@@ -15,6 +15,9 @@
             <a>{{category.name}}</a>
           </h2>
         </div>
+        <div *ngIf="category.brand && category.code" class="thumb-cat">
+          <h5>{{category.code}} - {{category.brand}}</h5>
+        </div>
       </div>
 
       <div class="clear"></div>

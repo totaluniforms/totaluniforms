@@ -37,11 +37,18 @@ body {
 }
 
 .product-card  {
+    
+    height: 375px;
+
     .thumb .thumb-image {
         max-height: 300px;
     }
 
     .featured-image {
-        height: 300px;
+        height: 350px;
     }
+}
+
+.center, .centre {
+    margin: 0 auto;
 }

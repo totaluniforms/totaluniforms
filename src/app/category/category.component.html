@@ -1,16 +1,18 @@
 <div class="container">
-  <div class="col-xs-12">
+  <div class="row">
     <ul class="breadcrumb">
       <li><a routerLink="/"><i class="glyphicon glyphicon-home"></i></a></li>
       <li><a routerLink="/{{category}}" class="active">{{category}}</a></li>
     </ul>
   </div>
 
-  <div *ngFor="let product of products" class="col-md-4 col-sm-6 col-xs-12">
-    <div class="product-card">
-      <a routerLink="/{{category}}/{{product.code}}">
-        <app-card [category]="product"></app-card>
-      </a>
+  <div class="row">
+    <div *ngFor="let product of products" class="col-md-4 col-sm-6">
+      <div class="product-card">
+        <a routerLink="/{{category}}/{{product.code}}">
+          <app-card [category]="product"></app-card>
+        </a>
+      </div>
     </div>
   </div>
 </div>
