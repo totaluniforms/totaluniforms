@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="col-xs-12">
+  <div class="container-fluid">
     <ul class="breadcrumb">
       <li><a routerLink="/"><i class="glyphicon glyphicon-home"></i></a></li>
       <li><a routerLink="/{{category}}">{{category}}</a></li>
@@ -7,14 +7,30 @@
     </ul>
   </div>
   
-  <div class="col-sm-6 col-xs-12">
-    <img src="assets/{{product.image}}" style="max-width: 100%">
+  <div class="row">
+    <div class="col-sm-6 col-xs-12">
+      <img src="assets/{{product.image}}" style="max-width: 100%">
+    </div>
+
+    <div class="col-sm-6 col-xs-12">
+      <h2>{{product.name}}</h2>
+      <h4>{{product.brand}}</h4>
+      <h4 style="white-space: pre-wrap;">{{product.description}}</h4>
+      <h4>Sizes: {{product.sizes}}</h4>
+    </div>
   </div>
 
-  <div class="col-sm-6 col-xs-12">
-    <h2>{{product.name}}</h2>
-    <h4>{{product.brand}}</h4>
-    <h4>{{product.description}}</h4>
-    <h4>Sizes: {{product.sizes}}</h4>
-  </div>  
+  <div class="row">
+    <br>
+    <hr>
+    <h3 class="center">You might also like:</h3>
+    <br>
+    <div *ngFor="let recommendation of recommended" class="col-sm-4">
+      <div class="product-card">
+        <a routerLink="/{{recommendation.category}}/{{recommendation.code}}">
+          <app-card [category]="recommendation"></app-card>
+        </a>
+      </div>
+    </div>
+  </div>
 </div>

@@ -3,8 +3,9 @@ import { Route } from '@angular/router';
 export interface Product {
   code: String,
   brand?: String,
-  sizes?: String, 
+  sizes?: String,
   name: string,
   description?: string,
-  image: string
+  image: string,
+  category?: String,
 }

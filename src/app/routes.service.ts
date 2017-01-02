@@ -20,9 +20,30 @@ import * as _ from 'lodash';
 @Injectable()
 export class RoutesService {
 
+    private productMap: Map<String, Product[]> = new Map<String, Product[]>();
     private products: Product[];
 
     constructor() {
+        let categoryBuilder = (category: String, products: Product[]) => {
+            _.each(products, product => {
+                if(!product.category) {
+                    product.category = category;
+                }
+            });
+
+            this.productMap.set(category, products);
+        };
+
+        categoryBuilder('workwear', workwear);
+        categoryBuilder('work-boots', workboots);
+        categoryBuilder('ppe', ppe);
+        categoryBuilder('office', office);
+        categoryBuilder('health-and-beauty', healthandbeauty);
+        categoryBuilder('cafe-and-chef', cafeandchef);
+        categoryBuilder('polos-and-tees', polosandtees);
+        categoryBuilder('proteam', proteam);
+        categoryBuilder('school', school);
+
         this.products = _.flatten([ppe, healthandbeauty, cafeandchef, polosandtees, proteam, school, workboots, office, workwear]);
     }
 
@@ -44,30 +65,27 @@ export class RoutesService {
         return filteredProducts[0];
     }
 
-    public getProducts(category: String): Product[] {
-        switch (category) {
-            case 'workwear':
-                return workwear;
-            case 'work-boots':
-                return workboots;
-            case 'ppe':
-                return ppe;
-            case 'office':
-                return office;
-            case 'health-and-beauty':
-                return healthandbeauty;
-            case 'cafe-and-chef':
-                return cafeandchef;
-            case 'polos-and-tees':
-                return polosandtees;
-            case 'proteam':
-                return proteam;
-            case 'school':
-                return school;
-            default:
-                // TODO Go to home
-                return [];
+    public getRecommended(productCode: String, size: number = 3): Product[] {
+        var filteredProducts = _.filter(this.products, product => {
+            return product.code !== productCode;
+        });
+
+        if (!filteredProducts.length) {
+            let message = "No product with code: " + productCode;
+            console.error(message);
+            throw new Error(message);
         }
+
+        return _.sampleSize(filteredProducts, size);
+    }
+
+    public getProducts(category: String): Product[] {
+
+        if(this.productMap.has(category)) {
+            return this.productMap.get(category);
+        }
+
+        return [];
     }
 
 }

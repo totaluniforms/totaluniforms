@@ -8,9 +8,10 @@ body {
     cursor: pointer;
 }
 
-.full::after {
+body::after {
   content: "";
   background-image: url('assets/background checker plate.png');
+  background-repeat: repeat-y;
   opacity: 0.2;
   top: 0;
   left: 0;
@@ -47,8 +48,4 @@ body {
     .featured-image {
         height: 350px;
     }
-}
-
-.center, .centre {
-    margin: 0 auto;
 }

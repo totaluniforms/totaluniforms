@@ -15,6 +15,7 @@ export class ProductComponent implements OnInit {
     private category: String;
     private productId: String;
     private product: Product;
+    private recommended: Product[];
 
     constructor(
         private route: ActivatedRoute,
@@ -28,6 +29,7 @@ export class ProductComponent implements OnInit {
                 this.category = params['category'];
                 this.productId =  params['product'];
                 this.product = this.routesService.getProduct(this.productId);
+                this.recommended = this.routesService.getRecommended(this.productId);
             });
     }
 }
