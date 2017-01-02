@@ -1,9 +1,11 @@
 <div class="container">
   <div class="col-xs-12">
-    <h4>
-      <a routerLink="/"> Home </a> / <a routerLink="/{{category}}"> {{category}} </a>
-    </h4>
+    <ul class="breadcrumb">
+      <li><a routerLink="/"><i class="glyphicon glyphicon-home"></i></a></li>
+      <li><a routerLink="/{{category}}" class="active">{{category}}</a></li>
+    </ul>
   </div>
+
   <div *ngFor="let product of products" class="col-md-4 col-sm-6 col-xs-12">
     <div class="product-card">
       <a routerLink="/{{category}}/{{product.code}}">

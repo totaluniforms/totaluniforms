@@ -38,10 +38,10 @@
           <input id="searchText" type="text" class="form-control col-lg-8" placeholder="Search...">
         </form>
         <li [hidden]="!showSearch">
-          <a href="#" (click)="toggleSearchBar()">Go</a>
+          <a (click)="toggleSearchBar()">Go</a>
         </li>
         <li>
-          <a href="#" (click)="toggleSearchBar()" [hidden]="showSearch">
+          <a (click)="toggleSearchBar()" [hidden]="showSearch">
             <span class="glyphicon glyphicon-search">
             <span class="sr-only">Search...</span>
             </span>

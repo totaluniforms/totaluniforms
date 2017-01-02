@@ -1,8 +1,10 @@
 <div class="container">
   <div class="col-xs-12">
-    <h4>
-      <a routerLink="/"> Home </a>  / <a routerLink="/{{category}}"> {{category}} </a> / <a routerLink="/{{category}}/{{product.id}}"> {{product.name}} </a>
-    </h4>
+    <ul class="breadcrumb">
+      <li><a routerLink="/"><i class="glyphicon glyphicon-home"></i></a></li>
+      <li><a routerLink="/{{category}}">{{category}}</a></li>
+      <li><a routerLink="/{{category}}/{{product.code}}" class="active">{{product.name}}</a></li>
+    </ul>
   </div>
   
   <div class="col-sm-6 col-xs-12">

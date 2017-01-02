@@ -1,0 +1,7 @@
+.breadcrumb li a:not(.active) {
+    color: #ccc;
+}
+
+.breadcrumb li a.active {
+    color: white;
+}
