@@ -2,15 +2,19 @@ import { Product } from './../../product';
 
 export var workwear: Product[] = [
   {
-    code: '1',
-    name: 'Workwear Shirt',
-    image: 'tradies.jpg',
-    description: 'A description about the Workwear Shirt'
+    code: '3201',
+    brand: 'DNC',
+    sizes: 'XS-5XL',
+    name: 'Cotton Drill Work Shirt - Short Sleeve',
+    image: 'products/dnc/3201450.jpg',
+    description: '190 gsm cotton drill. Full open front with twin flap pocket.'
   }, {
-    code: '2',
-    name: 'Work Pants',
-    image: 'tradie.jpg',
-    description: 'A description about the work Shirt'
+    code: '3209',
+    brand: 'DNC',
+    sizes: 'XS-5XL',
+    name: 'Cotton Drill Work Shirt With Gusset Sleeve - Long Sleeve',
+    image: 'products/dnc/3209250.jpg',
+    description: '190gsm cotton drill, Full open front, gusset sleeve.'
   }, {
     code: '3',
     name: 'Work other thing',
