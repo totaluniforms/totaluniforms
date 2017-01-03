@@ -7,6 +7,7 @@
   </div>
 
   <div class="row">
+    <h4 *ngIf="!products.length">Sorry... No products in this category yet!</h4>
     <div *ngFor="let product of products" class="col-md-4 col-sm-6">
       <div class="product-card">
         <a routerLink="/{{category}}/{{product.code}}">
