@@ -15,6 +15,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { NoContentComponent } from './no-content/no-content.component';
 import { HomeComponent } from './home/home.component';
 import { CardComponent } from './card/card.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { CardComponent } from './card/card.component';
     CategoryComponent,
     ProductComponent,
     CardComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,6 +35,7 @@ import { CardComponent } from './card/card.component';
     HttpModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
+      { path: 'about', component: AboutComponent },
       { path: ':category', component: CategoryComponent },
       { path: ':category/:product', component: ProductComponent },
       { path: '**', component: NoContentComponent }
