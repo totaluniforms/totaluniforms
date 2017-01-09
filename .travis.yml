@@ -22,3 +22,7 @@ after_success:
 after_script:
   - git remote set-url origin https://$GH_TOKEN@github.com/totaluniforms/totaluniforms.git
   - git push origin gh-pages:gh-pages --force
+
+cache:
+  - npm
+  - yarn
