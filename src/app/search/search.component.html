@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <ul class="breadcrumb">
+      <li><a routerLink="/"><i class="glyphicon glyphicon-home"></i></a></li>
+      <li>Searching for: {{query}}</li>
+    </ul>
+  </div>  
+
+  <div class="row">
+    <h4 *ngIf="!products.length">Sorry... No products found!</h4>
+    <div *ngFor="let product of products" class="col-md-4 col-sm-6">
+      <div class="product-card">
+        <a routerLink="/{{category}}/{{product.code}}">
+          <app-card [category]="product"></app-card>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

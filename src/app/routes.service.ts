@@ -88,4 +88,14 @@ export class RoutesService {
         return [];
     }
 
+    public searchForProducts(text: string): Product[] {
+        var filteredProducts = _.filter(this.products, product => {
+            console.log(product.name)
+
+            return _.includes(_.lowerCase(product.name), _.lowerCase(text));
+        });
+        console.log(filteredProducts)
+        return filteredProducts;
+    }    
+
 }

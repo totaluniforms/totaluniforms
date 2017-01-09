@@ -16,6 +16,7 @@ import { NoContentComponent } from './no-content/no-content.component';
 import { HomeComponent } from './home/home.component';
 import { CardComponent } from './card/card.component';
 import { AboutComponent } from './about/about.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { AboutComponent } from './about/about.component';
     ProductComponent,
     CardComponent,
     AboutComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,6 +38,7 @@ import { AboutComponent } from './about/about.component';
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'about', component: AboutComponent },
+      { path: 'search', component: SearchComponent },
       { path: ':category', component: CategoryComponent },
       { path: ':category/:product', component: ProductComponent },
       { path: '**', component: NoContentComponent }
