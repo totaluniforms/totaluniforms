@@ -21,12 +21,12 @@
 
     <div class="collapse navbar-collapse" id="navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a routerLink="/">Home <span class="sr-only">(current)</span></a></li>
-        <li><a routerLink="about">About</a></li>
+        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/">Home <span class="sr-only">(current)</span></a></li>
+        <li routerLinkActive="active"><a routerLink="contact-us">Contact Us</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shop for<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li *ngFor="let category of categories">
+            <li *ngFor="let category of categories" routerLinkActive="active">
               <a routerLink="/{{category.path}}">{{category.name}}</a>
             </li>
           </ul>

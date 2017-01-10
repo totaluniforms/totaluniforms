@@ -15,7 +15,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { NoContentComponent } from './no-content/no-content.component';
 import { HomeComponent } from './home/home.component';
 import { CardComponent } from './card/card.component';
-import { AboutComponent } from './about/about.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 import { SearchComponent } from './search/search.component';
 
 @NgModule({
@@ -28,7 +28,7 @@ import { SearchComponent } from './search/search.component';
     CategoryComponent,
     ProductComponent,
     CardComponent,
-    AboutComponent,
+    ContactUsComponent,
     SearchComponent,
   ],
   imports: [
@@ -37,7 +37,7 @@ import { SearchComponent } from './search/search.component';
     HttpModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
-      { path: 'about', component: AboutComponent },
+      { path: 'contact-us', component: ContactUsComponent },
       { path: 'search', component: SearchComponent },
       { path: ':category', component: CategoryComponent },
       { path: ':category/:product', component: ProductComponent },
