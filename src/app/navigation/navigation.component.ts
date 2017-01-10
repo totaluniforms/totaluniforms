@@ -23,8 +23,9 @@ export class NavigationComponent implements OnInit {
   ngOnInit() {
   }
 
-  search(text) {
-    this.router.navigate(['/search'], { queryParams: { q: text } });
+  search(searchField) {
+    this.router.navigate(['/search'], { queryParams: { q: searchField.value } });
+    searchField.value = '';
   }
 
   toggleSearchBar() {

@@ -35,7 +35,7 @@
 
       <ul class="nav navbar-nav navbar-right">
         <form class="navbar-form navbar-left" [hidden]="!showSearch">
-          <input #searchText (keyup.enter)="search(searchText.value)" type="text" class="form-control col-lg-8" placeholder="Search...">
+          <input #searchText (keyup.enter)="search(searchText)" type="text" class="form-control col-lg-8" placeholder="Search...">
         </form>
         <li [hidden]="!showSearch">
           <a (click)="toggleSearchBar()">Go</a>
