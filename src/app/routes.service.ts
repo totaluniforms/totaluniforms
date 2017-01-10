@@ -90,9 +90,15 @@ export class RoutesService {
 
     public searchForProducts(text: string): Product[] {
         var filteredProducts = _.filter(this.products, product => {
-            console.log(product.name)
+            text = _.lowerCase(text);
 
-            return _.includes(_.lowerCase(product.name), _.lowerCase(text));
+            var fields = ['code', 'brand', 'sizes', 'name', 'description', 'category'];
+
+            var matches = _.reduce(fields, (match, field) => {
+                return _.includes(_.lowerCase(product[field]), text) || match;
+            }, false);
+
+            return matches;
         });
         console.log(filteredProducts)
         return filteredProducts;
