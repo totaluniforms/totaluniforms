@@ -1,7 +1,55 @@
+.masthead {
+    padding-top: 20px;
+    padding: 10px;
+}
+
+.navbar-brand img {
+    max-height: 30px;
+    max-width: 90%;
+}
+
+.masthead img {
+    max-height: 50px;
+    max-width: 90%;
+}
+
 .breadcrumb li a:not(.active) {
     color: #ccc;
 }
 
 .breadcrumb li a.active {
     color: white;
+}
+
+input[type=text] {
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;  
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+    width: 100%;
+}
+
+@media(max-width:767px) {
+    .navbar .navbar-form {
+        width: 185px;
+        padding-left:0;
+        padding-right:0;
+    }
+}
+@media(min-width:768px) {
+    .navbar .navbar-form {
+        width: 250px;
+    }
+}
+.navbar .navbar-form {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-right: 0;
+    margin-left: 0;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
