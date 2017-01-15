@@ -1,5 +1,6 @@
 import { Product } from './product';
 import { Injectable, Component } from '@angular/core';
+import { Fuse } from 'fuse.js';
 
 import { ppe } from './data/categories/ppe.products';
 import { healthandbeauty } from './data/categories/health-and-beauty.products';
@@ -22,6 +23,7 @@ export class RoutesService {
 
     private productMap: Map<String, Product[]> = new Map<String, Product[]>();
     private products: Product[];
+    private productFuse: Fuse;
 
     constructor() {
         let categoryBuilder = (category: String, products: Product[]) => {
@@ -45,6 +47,9 @@ export class RoutesService {
         categoryBuilder('school', school);
 
         this.products = _.flatten([ppe, healthandbeauty, cafeandchef, polosandtees, proteam, school, workboots, office, workwear]);
+
+        var fields = ['code', 'brand', 'sizes', 'name', 'description', 'category'];
+        this.productFuse = new Fuse(this.products, {keys: fields});
     }
 
     public getRoutes(): Category[] {
@@ -89,19 +94,16 @@ export class RoutesService {
     }
 
     public searchForProducts(text: string): Product[] {
-        var filteredProducts = _.filter(this.products, product => {
-            text = _.lowerCase(text);
+        // var filteredProducts = _.filter(this.products, product => {
+        //     text = _.lowerCase(text);
 
-            var fields = ['code', 'brand', 'sizes', 'name', 'description', 'category'];
+            // var matches = _.reduce(fields, (match, field) => {
+            //     return _.includes(_.lowerCase(product[field]), text) || match;
+            // }, false);
 
-            var matches = _.reduce(fields, (match, field) => {
-                return _.includes(_.lowerCase(product[field]), text) || match;
-            }, false);
 
-            return matches;
-        });
-        console.log(filteredProducts)
-        return filteredProducts;
-    }    
+        // });
 
+        return this.productFuse.search<Product>(text);
+    }
 }
